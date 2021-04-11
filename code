@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() {
+   char text[200] = "C++/Python/Java (or another language) program finds all symbols (not only letters) in their probabilities out of all symbols. The most frequent symbols will have higher probabilities."; 
+   int i = 0, symbols[91] = {0}, k;
+   float j;
+   while (text[i] != '\0') {
+      if (text[i] >= ' ' && text[i] <= '}') {
+         k = text[i] - ' ';
+         ++symbols[k];
+      }
+      ++i;
+   }
+   j=i;
+   cout<<"Numbers"<<endl;
+   for (i = 0; i < 91; i++)
+   if (symbols[i]>=1) {
+   cout<< char(i + ' ')<<" : "<< symbols[i]/j << endl;
+   }
+   return 0;
+}
